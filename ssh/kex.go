@@ -402,6 +402,7 @@ func init() {
 	kexAlgoMap[kexAlgoECDH384] = &ecdh{elliptic.P384()}
 	kexAlgoMap[kexAlgoECDH256] = &ecdh{elliptic.P256()}
 	kexAlgoMap[kexAlgoCurve25519SHA256] = &curve25519sha256{}
+	kexAlgoMap[kexAlgoDHGEXSHA256] = &dhGEXSHA{hashFunc: crypto.SHA256}
 }
 
 // curve25519sha256 implements the curve25519-sha256@libssh.org key
